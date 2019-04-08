@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment {
-        NGINX_VERSION = "nginx:1.7.9"
+        NGINX_VERSION = "nginx:1.14"
     }
     stages {
         /* stage('Build') { 
