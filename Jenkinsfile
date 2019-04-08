@@ -24,5 +24,18 @@ pipeline {
                 // 
             }
         } */
+        stage('Publish to Kubernetes') {
+            environment {
+                VT_SITE_URL = ""
+            }
+            steps {
+                kubernetesDeploy(
+                    kubeconfigId: 'kubernetes-cid',
+                    configs: 'k8s/*.yml',
+                    enableConfigSubstitution: true,
+                    secretNamespace: 'default',
+                )
+            }
+        }
     }
 }
