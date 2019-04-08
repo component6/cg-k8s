@@ -29,7 +29,7 @@ pipeline {
                     credentialsType: 'KubeConfig',
                     kubeConfig: [path: '/home/sg/.kube/config'],
                     configs: 'k8s/*.yml',
-                    enableConfigSubstitution: true,
+                    // enableConfigSubstitution: true,
                     // secretNamespace: 'default',
                 )
             }
