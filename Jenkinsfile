@@ -30,7 +30,9 @@ pipeline {
             }
             steps {
                 kubernetesDeploy(
-                    kubeconfigId: 'cid-configfile-minikube',
+                    // kubeconfigId: 'cid-configfile-minikube',
+                    credentialsType: 'KubeConfig',
+                    kubeConfig: [path: '/home/sg/.kube/config'],
                     configs: 'k8s/nginx.yml',
                     // enableConfigSubstitution: true,
                     // secretNamespace: 'default',
