@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 kubernetesDeploy(
-                    kubeconfigId: 'kubernetes-cid',
+                    kubeconfigId: 'kubernetes-cid-minikube',
                     configs: 'k8s/*.yml',
                     // enableConfigSubstitution: true,
                     // secretNamespace: 'default',
