@@ -1,14 +1,9 @@
 pipeline {
     agent any 
-    // environment {
-        
-    // }
+    environment {
+        NGINX_VERSION = "nginx:1.7.9"
+    }
     stages {
-        stage('Step 2') { 
-            steps {
-                echo 'Step 1'
-            }
-        }
         /* stage('Build') { 
             steps {
                 // 
@@ -34,7 +29,7 @@ pipeline {
                     credentialsType: 'KubeConfig',
                     kubeConfig: [path: '/home/sg/.kube/config'],
                     configs: 'k8s/*.yml',
-                    // enableConfigSubstitution: true,
+                    enableConfigSubstitution: true,
                     // secretNamespace: 'default',
                 )
             }
