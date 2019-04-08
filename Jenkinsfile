@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 kubernetesDeploy(
-                    kubeconfigId: 'kubernetes-cid',
+                    kubeconfigId: 'kubernetes-cid-configfile-google',
                     configs: 'k8s/*.yml',
                     // enableConfigSubstitution: true,
                     // secretNamespace: 'default',
