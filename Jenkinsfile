@@ -30,8 +30,8 @@ pipeline {
             }
             steps {
                 kubernetesDeploy(
-                    kubeconfigId: 'kubernetes-cid-configfile-google-2',
-                    configs: 'k8s/*.yml',
+                    kubeconfigId: 'cid-configfile-minikube',
+                    configs: 'k8s/loadbalancer-services.yml',
                     // enableConfigSubstitution: true,
                     // secretNamespace: 'default',
                 )
