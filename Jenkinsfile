@@ -33,7 +33,7 @@ pipeline {
                     // kubeconfigId: 'cid-configfile-minikube',
                     credentialsType: 'KubeConfig',
                     kubeConfig: [path: '/home/sg/.kube/config'],
-                    configs: 'k8s/nginx.yml',
+                    configs: 'k8s/*.yml',
                     // enableConfigSubstitution: true,
                     // secretNamespace: 'default',
                 )
