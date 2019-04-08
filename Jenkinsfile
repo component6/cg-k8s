@@ -32,8 +32,8 @@ pipeline {
                 kubernetesDeploy(
                     kubeconfigId: 'kubernetes-cid',
                     configs: 'k8s/*.yml',
-                    enableConfigSubstitution: true,
-                    secretNamespace: 'default',
+                    // enableConfigSubstitution: true,
+                    // secretNamespace: 'default',
                 )
             }
         }
