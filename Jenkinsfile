@@ -30,10 +30,12 @@ pipeline {
             }
             steps {
                 kubernetesDeploy(
-                    kubeconfigId: 'kubernetes-cid',
-                    configs: 'k8s/*.yml',
-                    // enableConfigSubstitution: true,
-                    // secretNamespace: 'default',
+                    kubeconfigId: 'content-config-file-google', 
+                    configs: 'k8s/loadbalancer-services.yml', 
+                    // kubeConfig: [path: ''], 
+                    // secretName: '', 
+                    // ssh: [sshCredentialsId: '*', sshServer: ''], 
+                    // textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
                 )
             }
         }
